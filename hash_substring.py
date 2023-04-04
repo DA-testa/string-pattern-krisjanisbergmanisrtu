@@ -32,8 +32,6 @@ def read_input():
     # this is the sample return, notice the rstrip function
     pattern = pattern.strip()
     string = string.strip()
-    print("'", pattern, "'")
-    print("'", string, "'")
     return (pattern, string)
 
 
@@ -54,10 +52,6 @@ def get_occurrences(pattern, text):
     index_for_end_char = pattern_length - 1
     for i in range(text_length - pattern_length + 1):
         sub_string_hash = get_hash(sub_string)
-        print(sub_string)
-        print(i)
-        print(pattern_hash)
-        print(sub_string_hash)
         if sub_string_hash == pattern_hash:
 
             if sub_string == pattern:

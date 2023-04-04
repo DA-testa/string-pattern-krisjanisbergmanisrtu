@@ -30,7 +30,7 @@ def read_input():
 
     # return both lines in one return
     # this is the sample return, notice the rstrip function
-    return (pattern, string)
+    return (pattern.strip(), string.strip())
 
 
 def print_occurrences(output):

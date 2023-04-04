@@ -30,8 +30,6 @@ def read_input():
 
     # return both lines in one return
     # this is the sample return, notice the rstrip function
-    print(pattern)
-    print(string)
     return (pattern, string)
 
 
@@ -55,6 +53,7 @@ def get_occurrences(pattern, text):
         if sub_string_hash == pattern_hash:
             if sub_string == pattern:
                 occurrence.append(i)
+                print(i)
         if index_for_end_char < text_length - 1:
             index_for_end_char = index_for_end_char + 1
             sub_string = sub_string[1:]  # Remove first char from pattern

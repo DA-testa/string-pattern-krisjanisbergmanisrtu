@@ -12,7 +12,7 @@ def read_input():
     string = ""
 
     if "F" in text:
-        file_name = input()
+        # file_name = input()
         # file = open("./tests/" + file_name, "r")
         file = open("./tests/06", "r")
         text = file.read()

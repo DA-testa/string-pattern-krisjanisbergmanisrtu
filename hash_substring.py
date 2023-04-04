@@ -13,13 +13,13 @@ def read_input():
 
     if "F" in text:
         file_name = input()
-        file = open("./test/" + file_name, "r")
+        file = open("./tests/" + file_name, "r")
         text = file.read()
         # after input type choice
         # read two lines
         text = text.split('\n')
         pattern = text[0]
-        string = text[1].split(' ')
+        string = text[1]
 
     elif "I" in text:
         # first line is pattern
@@ -47,7 +47,7 @@ def get_occurrences(pattern, text):
 
     sub_string = text[:pattern_length]  # substring will be first chars (as many as in pattern) of text
     index_for_end_char = pattern_length - 1
-    for i in range(int(text_length / 2 + 2)):
+    for i in range(text_length):
         sub_string_hash = get_hash(sub_string)
         if sub_string_hash == pattern_hash:
             if sub_string == pattern:

@@ -30,6 +30,8 @@ def read_input():
 
     # return both lines in one return
     # this is the sample return, notice the rstrip function
+    print(pattern)
+    print(string)
     return (pattern, string)
 
 

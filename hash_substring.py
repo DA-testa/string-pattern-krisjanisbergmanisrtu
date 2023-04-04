@@ -32,6 +32,8 @@ def read_input():
     # this is the sample return, notice the rstrip function
     pattern = pattern.strip()
     string = string.strip()
+    print("'", pattern, "'")
+    print("'", string, "'")
     return (pattern, string)
 
 
@@ -41,8 +43,6 @@ def print_occurrences(output):
 
 
 def get_occurrences(pattern, text):
-    print("'",pattern,"'")
-    print("'",text,"'")
     # this function should find the occurances using Rabin Karp alghoritm
     pattern_length = len(pattern)
     text_length = len(text)
@@ -50,7 +50,7 @@ def get_occurrences(pattern, text):
     pattern_hash = get_hash(pattern)
     occurrence = []
 
-    sub_string = text[:pattern_length - 1]  # substring will be first chars (as many as in pattern) of text
+    sub_string = text[:pattern_length]  # substring will be first chars (as many as in pattern) of text
     index_for_end_char = pattern_length - 1
     for i in range(text_length - pattern_length + 2):
         sub_string_hash = get_hash(sub_string)

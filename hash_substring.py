@@ -13,7 +13,7 @@ def read_input():
 
     if "F" in text:
         file_name = input()
-        file = open("./tests/" + file_name, "r")
+        file = open(file_name, "r")
         text = file.read()
         # after input type choice
         # read two lines

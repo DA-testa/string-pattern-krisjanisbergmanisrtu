@@ -48,14 +48,11 @@ def get_occurrences(pattern, text):
 
     sub_string = text[:pattern_length - 1]  # substring will be first chars (as many as in pattern) of text
     index_for_end_char = pattern_length - 1
-    for i in range(text_length - pattern_length + 1):
+    for i in range(text_length - pattern_length + 2):
         sub_string_hash = get_hash(sub_string)
-        print(sub_string)
-        print(i)
         if sub_string_hash == pattern_hash:
             if sub_string == pattern:
                 occurrence.append(i)
-                print(i)
         if index_for_end_char < text_length - 1:
             index_for_end_char = index_for_end_char + 1
             sub_string = sub_string[1:]  # Remove first char from pattern

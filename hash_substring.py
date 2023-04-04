@@ -51,6 +51,8 @@ def get_occurrences(pattern, text):
     for i in range(text_length - pattern_length + 2):
         sub_string_hash = get_hash(sub_string)
         if sub_string_hash == pattern_hash:
+            print(sub_string)
+            print(i)
             if sub_string == pattern:
                 occurrence.append(i)
         if index_for_end_char < text_length - 1:
